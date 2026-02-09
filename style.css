@@ -1,3 +1,31 @@
 body {
-    background-color: #b8b5b5;
+   background-color: #d5d4d4;
+	max-width: 1200px;
+}
+
+/* HEADER SECTION */
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	width: 100px;
+	height: auto;
+}
+
+.header__buttons {
+	display: flex;
+	flex-direction: row;
+}
+
+.header__button {
+	padding-top: 0;
+}
+
+.header__title {
+	font-family: monospace;
 }
