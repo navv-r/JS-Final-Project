@@ -12,20 +12,45 @@ header {
 	align-items: center;
 }
 
+.header__section {
+	background-color: white;
+	margin: 2px;
+	max-width: 1200px;
+}
+
+.header__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
 .header__logo {
 	width: 100px;
 	height: auto;
 }
 
-.header__buttons {
-	display: flex;
-	flex-direction: row;
-}
-
 .header__button {
 	padding-top: 0;
+	cursor: pointer;
+	padding-left: 18px;
 }
 
 .header__title {
-	font-family: monospace;
+	font-family:monospace;
+	background-color: white;
+	justify-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.header__link {
+	padding-left: 9px;
+	padding-right: 9px;
+	cursor: pointer;
+}
+
+.header__button {
+	padding-left: 9px;
+	margin-right: 18px;
 }
