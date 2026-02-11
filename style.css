@@ -62,9 +62,9 @@
 
 /* ---------- TITLE + SEARCH ---------- */
 .header__title {
-    margin-top: 80px;
+    margin-top: 30px;
     text-align: center;
-	font-size: 40px;
+	 font-size: 40px;
     margin-bottom: 24px;
 }
 
@@ -72,8 +72,9 @@
 
 /* ---------- SEARCH INPUT ---------- */
 .input {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+	 justify-content: center;
     gap: 8px;
 }
 
@@ -110,7 +111,9 @@
 
 .filters {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+	 max-width: 1100px;
+	 width: 100%;
     gap: 24px;
 }
 
@@ -118,12 +121,18 @@
     position: relative;
 }
 
+.filter__title {
+	padding-top: 8px;
+	padding-left: 24px;
+	color: white;
+}
+
 .filter__button {
     background-color: #7b00ff;
     color: white;
     border: none;
     padding: 10px 18px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -133,10 +142,10 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #111;
+    background-color: #333;
     padding: 8px 0;
-    border-radius: 4px;
-    min-width: 160px;
+    border-radius: 6px;
+    max-width: 122px;
     z-index: 10;
 }
 
@@ -148,7 +157,8 @@
 }
 
 .filter__menu a:hover {
-    background-color: #333;
+    background-color: #7b00ff;
+	 color: white;
 }
 
 /* Show menu on hover */
