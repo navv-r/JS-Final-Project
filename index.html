@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JavaScript Final Project</title>
-   <link href="style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Final Project</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-   <header class="header__section">
-      <div class="header">
-			<img class="header__logo" src="./Assets/logo.png">
-      </div>
-		<div class="header__nav">
-			<a class="header__link">About Us</a>
-			<a class="header__link">Find Your Movie</a>
-			<button class="header__button">Contact US</button>
-		</div>
-		<div class="search__bar--title">
-			<h1 class="header__title">Browse Your Favorite Movies!</h1>
-		</div>
-		<div class="input">
-			<input class="input__box" placeholder="Type Movie Name Here">
-			<button class="input__button">
-				<i class="fa-solid fa-magnifying-glass"></i>
-			</button>
-		</div>
- 	</header>
-	<section class="filters__section">
-    <div class="filters">
-		<h3 class="filter__title">Search Results:</h3>
-        <div class="filter">
-            <button class="filter__button">Filter By</button>
-            <div class="filter__menu">
-                <a href="#">Popularity</a>
-                <a href="#">Rating</a>
-                <a href="#">Price</a>
-                <a href="#">Action</a>
-                <a href="#">Comedy</a>
-                <a href="#">Drama</a>
-            </div>
-        </div>
+
+  <header class="header__section">
+    <div class="header">
+      <img class="header__logo" src="./Assets/logo.png">
     </div>
-</section>
+
+    <div class="header__nav">
+      <a class="header__link">About Us</a>
+      <a class="header__link">Find Your Movie</a>
+      <button class="header__button">Contact Us</button>
+    </div>
+
+    <div class="search__bar--title">
+      <h1 class="header__title">Browse Your Favorite Movies!</h1>
+    </div>
+
+    <div class="input">
+      <input class="input__box" placeholder="Type Movie Name Here">
+      <button class="input__button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="filters__section">
+    <div class="filters">
+      <h3 class="filter__title">Search Results:</h3>
+
+      <div class="filter">
+        <button class="filter__button" >Sort By</button>
+        <div class="filter__menu" id="sortMenu">
+          <a href="#" data-sort="title-asc">Title (A-Z)</a>
+          <a href="#" data-sort="title-desc">Title (Z-A)</a>
+          <a href="#" data-sort="year-desc">Year (Newest)</a>
+          <a href="#" data-sort="year-asc">Year (Oldest)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
