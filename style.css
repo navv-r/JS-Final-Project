@@ -6,6 +6,10 @@
     font-family:monospace;
 }
 
+body {
+	background-color: #444;
+}
+
 /* ---------- HEADER SECTION ---------- */
 .header__section {
     width: 100%;
@@ -175,7 +179,7 @@
 
 .movie-card {
   text-align: center;
-  background: #111;
+  background: #333;
   color: #fff;
   border-radius: 10px;
   padding: 0.5rem;
