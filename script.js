@@ -1,8 +1,5 @@
-console.log('script.js loaded');
-
 const apiKey = 'c2e6bd24';
 const baseUrl = 'https://www.omdbapi.com/';
-
 const inputBox = document.querySelector('.input__box');
 const searchButton = document.querySelector('.input__button');
 const resultsSection = document.querySelector('.filters__section');
@@ -51,7 +48,7 @@ function renderMovies(movieList) {
     movieCard.innerHTML = `
       <img src="${poster}" alt="${movie.Title}">
       <h4>${movie.Title}</h4>
-      <p>📅 ${movie.Year}</p>
+      <p>Release Year: ${movie.Year}</p>
     `;
 
     movieGrid.appendChild(movieCard);
