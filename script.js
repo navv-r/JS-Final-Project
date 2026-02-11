@@ -1,14 +1,16 @@
-const apiKey = 'c2e6bd24'; 
-const baseUrl = 'https://www.omdbapi.com/';
+console.log('script.js loaded');
 
+const apiKey = 'c2e6bd24';
+const baseUrl = 'https://www.omdbapi.com/';
 
 const inputBox = document.querySelector('.input__box');
 const searchButton = document.querySelector('.input__button');
 const resultsSection = document.querySelector('.filters__section');
 const sortOptions = document.querySelectorAll('.filter__menu a');
+const sortButton = document.getElementById('sortButton');
+const sortMenu = document.getElementById('sortMenu');
 
-let movies = []; 
-
+let movies = [];
 
 async function fetchMovies(query) {
   try {
@@ -22,9 +24,8 @@ async function fetchMovies(query) {
       return;
     }
 
-    movies = data.Search; 
+    movies = data.Search;
     renderMovies(movies);
-
   } catch (error) {
     console.error('Error fetching movies:', error);
   }
@@ -76,27 +77,19 @@ function sortMovies(type) {
     case 'title-asc':
       sortedMovies.sort((a, b) => a.Title.localeCompare(b.Title));
       break;
-
     case 'title-desc':
       sortedMovies.sort((a, b) => b.Title.localeCompare(a.Title));
       break;
-
     case 'year-asc':
-      sortedMovies.sort(
-        (a, b) => parseInt(a.Year) - parseInt(b.Year)
-      );
+      sortedMovies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
       break;
-
     case 'year-desc':
-      sortedMovies.sort(
-        (a, b) => parseInt(b.Year) - parseInt(a.Year)
-      );
+      sortedMovies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
       break;
   }
 
   renderMovies(sortedMovies);
 }
-
 
 searchButton.addEventListener('click', () => {
   const query = inputBox.value.trim();
@@ -110,9 +103,19 @@ sortOptions.forEach(option => {
     event.preventDefault();
     const sortType = option.dataset.sort;
     sortMovies(sortType);
+    sortMenu.classList.remove('active');
   });
 });
 
+sortButton.addEventListener('click', () => {
+  sortMenu.classList.toggle('active');
+});
+
+document.addEventListener('click', event => {
+  if (!event.target.closest('.filter')) {
+    sortMenu.classList.remove('active');
+  }
+});
 
 inputBox.addEventListener('keydown', event => {
   if (event.key === 'Enter') {
